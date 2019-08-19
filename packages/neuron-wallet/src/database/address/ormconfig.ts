@@ -14,7 +14,7 @@ const dbPath = path.join(env.fileBasePath, 'address.sqlite')
 const connectionName = 'address'
 
 const connectOptions = (): SqliteConnectionOptions => {
-  const database = env.isTestMode ? ':memory:' : dbPath
+  const database = dbPath
   return {
     name: connectionName,
     type: 'sqlite',
